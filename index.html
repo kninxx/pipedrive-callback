@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Pipedrive callback</title>
+<pre id="out"></pre>
+<script>
+  const p = new URLSearchParams(location.search);
+  document.getElementById("out").textContent =
+    p.get("code") ? "code = " + p.get("code") : "Aucun code. Erreur: " + (p.get("error") || "inconnue");
+</script>
